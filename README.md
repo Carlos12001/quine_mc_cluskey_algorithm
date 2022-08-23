@@ -1,4 +1,4 @@
-# Hola este un proyecto de Diseno Logico
+# Hola este un proyecto de Diseño Lógico
 
-Se desarrollara el algoritmo de Mc Cluskey. Atraves de un cuaderno de Juypter.
+Se desarrollará el algoritmo de Mc Cluskey. A través de un cuaderno de Jupyter.
 

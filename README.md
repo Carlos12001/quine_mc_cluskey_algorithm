@@ -12,7 +12,7 @@ Se desarrollará el algoritmo de Mc Cluskey. A través de un cuaderno de Jupyter
 Abre el arhivo llamado ``main.ipynb``
 
 Dentro el arhivo abrá un apartado de **Testing**. En dicho apartado
-se encuentra las prueubas de los algoritmos con el fin de verificar el funcionamiento.
+se encuentra las pruebas de los algoritmos con el fin de verificar el funcionamiento.
 
 # Enunciado
 

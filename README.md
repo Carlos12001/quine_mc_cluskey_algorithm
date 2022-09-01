@@ -35,3 +35,6 @@ E2%80%93McCluskey.
 - [Vertical Selection JetBrains IDEs](https://georgik.rocks/intellij-idea-vertical-text-block-selection/)
 - [Markdown Syntax](https://gist.github.com/cuonggt/9b7d08a597b167299f0d)
 - [Ordena numero por cantidad de 1's](https://www.tutorialspoint.com/program-to-sort-numbers-based-on-1-count-in-their-binary-representation-in-python)
+- [Bint to int](https://stackoverflow.com/questions/8928240/convert-base-2-binary-number-string-to-int)
+- [Count in Python](https://www.w3schools.com/python/ref_list_count.asp)
+- [Lambda en Python](https://www.w3schools.com/python/python_lambda.asp)

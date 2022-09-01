@@ -184,19 +184,19 @@ int main ()
    char check='y';
    while(check=='y')
    {
-      int no;
-      cout<<endl<<"Enter the number of variables:"<<endl;
-      cin>>no;
-      if(no > 8 || no < 1)
-      {
-          cout << "Invalid number of variables (1-8)" << endl;
-          continue;
-      }
+      int no=4;
+//      cout<<endl<<"Enter the number of variables:"<<endl;
+//      cin>>no;
+//      if(no > 8 || no < 1)
+//      {
+//          cout << "Invalid number of variables (1-8)" << endl;
+//          continue;
+//      }
       QM q(no);
 
-      string temp="";
-      cout<<"Enter the minterms(RANGE=0-"<<pow(2,no)-1<<") separated by comma:"<<endl;
-      cin>>temp;
+      string temp="1,4,6,15";
+//      cout<<"Enter the minterms(RANGE=0-"<<pow(2,no)-1<<") separated by comma:"<<endl;
+//      cin>>temp;
 
       //splitting the input
       vector<string> minterms;
@@ -224,8 +224,9 @@ int main ()
           cout <<q.getValue(minterms[i])<<"+";
       cout<<q.getValue(minterms[i])<<endl;
 
-      cout<<"Would you like to enter another expression? (y/n)"<<endl;
-      cin>>check;
+//      cout<<"Would you like to enter another expression? (y/n)"<<endl;
+//      cin>>check;
+        check = 'n';
    }
    cout<<endl<<"---END--"<<endl<<"Created by Akshay"<<endl;
 }

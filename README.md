@@ -35,4 +35,4 @@ E2%80%93McCluskey.
 - [Num binarios en python](https://www.w3schools.com/python/ref_func_bin.asp#:~:text=The%20bin()%20function%20returns,start%20with%20the%20prefix%200b%20.)
 - [Padding (Relleno) en los numeros binarios en python)](https://stackoverflow.com/questions/16926130/convert-to-binary-and-keep-leading-zeros)
 - [Realizar hint (agregar tipo) a las variables de python](https://docs.python.org/3/library/typing.html)
- 
+- [Vertical Selection JetBrains IDEs](https://georgik.rocks/intellij-idea-vertical-text-block-selection/)

@@ -15,14 +15,11 @@ Se desarrollará el algoritmo de Mc Cluskey. A través de un cuaderno de Jupyter
 
 # Referencias Originales
 
-[1] Felipe Santiago Espinoza. Video demostrativo del algoritmo de Quine-McCluskey. url: https://www.
-youtube.com/watch?v=DTOzK88Inkk.
+[1] Felipe Santiago Espinoza. Video demostrativo del algoritmo de Quine-McCluskey. url: https://www.outube.com/watch?v=DTOzK88Inkk.
 
-[2] Donald Krambeck. Everything About the Quine-McCluskey Method - technical articles. url: https:
-//www.allaboutcircuits.com/technical-articles/everything-about-the-quine-mccluskeymethod/.
+[2] Donald Krambeck. Everything About the Quine-McCluskey Method - technical articles. url: https://www.allaboutcircuits.com/technical-articles/everything-about-the-quine-mccluskeymethod/.
 
-[3] Donald Krambeck. Prime implicant simplification using Petrick’s method - technical articles. url:
-https://www.allaboutcircuits.com/technical-articles/prime-implicant-simplificationusing-petricks-method/.
+[3] Donald Krambeck. Prime implicant simplification using Petrick’s method - technical articles. url:https://www.allaboutcircuits.com/technical-articles/prime-implicant-simplificationusing-petricks-method/.
 
 [4] E. J. McCluskey. «Minimization of Boolean functions». En: The Bell System Technical Journal 35.6
 (1956), págs. 1417-1444. doi: 10.1002/j.1538-7305.1956.tb03835.x.
@@ -36,3 +33,4 @@ E2%80%93McCluskey.
 - [Padding (Relleno) en los numeros binarios en python)](https://stackoverflow.com/questions/16926130/convert-to-binary-and-keep-leading-zeros)
 - [Realizar hint (agregar tipo) a las variables de python](https://docs.python.org/3/library/typing.html)
 - [Vertical Selection JetBrains IDEs](https://georgik.rocks/intellij-idea-vertical-text-block-selection/)
+- [Markdown Syntax](https://gist.github.com/cuonggt/9b7d08a597b167299f0d)

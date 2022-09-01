@@ -34,3 +34,4 @@ E2%80%93McCluskey.
 - [Realizar hint (agregar tipo) a las variables de python](https://docs.python.org/3/library/typing.html)
 - [Vertical Selection JetBrains IDEs](https://georgik.rocks/intellij-idea-vertical-text-block-selection/)
 - [Markdown Syntax](https://gist.github.com/cuonggt/9b7d08a597b167299f0d)
+- [Ordena numero por cantidad de 1's](https://www.tutorialspoint.com/program-to-sort-numbers-based-on-1-count-in-their-binary-representation-in-python)

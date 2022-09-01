@@ -5,7 +5,7 @@ Se desarrollará el algoritmo de Mc Cluskey. A través de un cuaderno de Jupyter
 
 # Integrantes 
 - Carlos Andrés Mata Calderón (2019033834)
-- Jesús 
+- Jesús Soto Benavides
 
 # ¿Cómo correr el proyecto?
 

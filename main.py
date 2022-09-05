@@ -1,3 +1,5 @@
+import timeit
+
 num_var = 0
 
 
@@ -88,6 +90,7 @@ def reduce(lista_minterminos):
     # Finaliza el Paso 5
     return nuevos_minterminos
 
+
 # Algoritmo de Quine McCluskey
 def quine_mc_cluskey(num_literales, minterminos):
     global num_var
@@ -138,6 +141,15 @@ def obtenga_funcion(lista_minterminos):
     return resultado
 
 
+# Función que calcula tiempo de otras funciones
+def calcula_tiempo(funcion, *args):
+    inicio = timeit.default_timer()
+    resultado = funcion(*args)
+    fin = timeit.default_timer()
+    return fin - inicio, resultado
+
+
+# Pruebas del programa
 def prueba():
     global num_var
     num_var = 4
@@ -178,18 +190,22 @@ def prueba():
     print(
         "Revisa si dicho número binario existe dentro la lista de minterminos",
         "[1010,0000,1000,0001]", "0010")
-    print(dentro_de_la_lista(["1010", "0000", "1000", "0001"], "0010"))
+    print(dentro_de_la_lista(["1010", "0000", "1000", "0001"], "0010"), "\n\n")
 
     # Prueba Quine McCluskey
+    print("----Prueba de  Quine McCluskey----")
+    print("Entrada:", 4, [1, 4, 6, 15])
     lista_minterminos = quine_mc_cluskey(4, [1, 4, 6, 15])
-    print("Resultado:", lista_minterminos)
+    print("Resultado:", lista_minterminos, "\n")
+
+    # Calcular tiempo del algoritmo
+    print("Tiempo de ejecucion: ",
+          calcula_tiempo(quine_mc_cluskey, 4, [1, 4, 6, 15])[0], "[s]", "\n")
+
     # Imprime el resultado en forma funcion booleana
-    print(obtenga_funcion(lista_minterminos))
+    print("Representacion funcional booleana")
+    print(obtenga_funcion(lista_minterminos), "\n")
 
 
 if __name__ == "__main__":
-    # prueba()
-    # Prueba Quine McCluskey
-    lista_minterminos = quine_mc_cluskey(4, [1, 4, 6, 15])
-    print(lista_minterminos)
-    print(obtenga_funcion(lista_minterminos))
+    prueba()

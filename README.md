@@ -51,3 +51,5 @@ E2%80%93McCluskey.
 - [Count in Python](https://www.w3schools.com/python/ref_list_count.asp)
 - [Lambda en Python](https://www.w3schools.com/python/python_lambda.asp)
 - [Do while en Python](https://realpython.com/python-do-while/)
+- [Funcion como parametro](https://es.stackoverflow.com/questions/139223/se-puede-pasar-una-funci%C3%B3n-como-par%C3%A1metro-en-python)
+- [Calcular tiempo de funciones]()

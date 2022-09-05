@@ -88,7 +88,7 @@ def reduce(lista_minterminos):
     # Finaliza el Paso 5
     return nuevos_minterminos
 
-
+# Algoritmo de Quine McCluskey
 def quine_mc_cluskey(num_literales, minterminos):
     global num_var
 
@@ -109,7 +109,7 @@ def quine_mc_cluskey(num_literales, minterminos):
     return lista_minterminos
 
 
-# Muestra el literal en su representacion booleana
+# Muestra el implicante en su representacion booleana
 def obtenga_literal(minterminos):
     global num_var
     resultado = ""
@@ -129,7 +129,7 @@ def obtenga_literal(minterminos):
         return resultado
 
 
-# Realiza la representacion de la suma de minterminos
+# Realiza la representacion booelana funcional de la suma de minterminos
 def obtenga_funcion(lista_minterminos):
     resultado = ""
     for i in lista_minterminos[:len(lista_minterminos) - 1]:

@@ -54,6 +54,90 @@ def dentro_de_la_lista(lista_minterinos, num_bin):
     return False
 
 
+# Simplifica la lista de minterminos
+def reduce(lista_minterminos):
+    nuevos_minterminos = []  # Lista de minterminos reducida
+    n = len(lista_minterminos)  # Largo de la lista
+    """
+    Lista incia 0's de n elementos ya que ningún mintermino ha cambiado
+    ha hecho paraja con otro mintérmino. Cuando lo encuentre pasa a ser 1.
+    """
+    cual_mintermino_cambio = [0] * n
+
+    # Paso 5
+    for i in range(n):
+        for j in range(n):
+            if se_diferencia_un_digito(lista_minterminos[i],
+                                       lista_minterminos[j]):
+                cual_mintermino_cambio[i] = 1
+                cual_mintermino_cambio[j] = 1
+                nuevo_num_bin = remplaza_complementos(lista_minterminos[i],
+                                                      lista_minterminos[j])
+                # Paso 6
+                if not dentro_de_la_lista(nuevos_minterminos, nuevo_num_bin):
+                    nuevos_minterminos.append(nuevo_num_bin)
+
+    # Se agrega todos los terminos reducidos a la lista
+    for i in range(n):
+        # Paso 6
+        if (cual_mintermino_cambio[i] != 1 and (
+                not dentro_de_la_lista(nuevos_minterminos,
+                                       lista_minterminos[i]))):
+            nuevos_minterminos.append(lista_minterminos[i])
+
+    # Finaliza el Paso 5
+    return nuevos_minterminos
+
+
+def quine_mc_cluskey(num_literales, minterminos):
+    global num_var
+
+    num_var = num_literales
+    lista_minterminos = []
+
+    lista_minterminos = lista_entero_a_bin(minterminos)
+    lista_minterminos = ordena_lista_por_1s(lista_minterminos)
+
+    # Se repite el Paso 5 hasta que se encuentre todos los primos esenciales
+    while True:
+        lista_minterminos = reduce(lista_minterminos)
+        ordena_lista_por_1s(lista_minterminos)
+        if lista_minterminos == reduce(lista_minterminos):
+            break
+
+    # Paso 7
+    return lista_minterminos
+
+
+# Muestra el literal en su representacion booleana
+def obtenga_literal(minterminos):
+    global num_var
+    resultado = ""
+    variables = ["a", "b", "c", "d", "e", "f", "g", "h"]
+    no_importa = "-" * num_var
+
+    if minterminos == no_importa:
+        return "1"
+    else:
+        for i in range(len(minterminos)):
+            if minterminos[i] != "-":
+                if minterminos[i] == "0":
+                    resultado = resultado + variables[i] + "\'"
+                else:
+                    resultado = resultado + variables[i]
+
+        return resultado
+
+
+# Realiza la representacion de la suma de minterminos
+def obtenga_funcion(lista_minterminos):
+    resultado = ""
+    for i in lista_minterminos[:len(lista_minterminos) - 1]:
+        resultado += obtenga_literal(i) + " + "
+    resultado += obtenga_literal(lista_minterminos[-1])
+    return resultado
+
+
 def prueba():
     global num_var
     num_var = 4
@@ -96,6 +180,16 @@ def prueba():
         "[1010,0000,1000,0001]", "0010")
     print(dentro_de_la_lista(["1010", "0000", "1000", "0001"], "0010"))
 
+    # Prueba Quine McCluskey
+    lista_minterminos = quine_mc_cluskey(4, [1, 4, 6, 15])
+    print("Resultado:", lista_minterminos)
+    # Imprime el resultado en forma funcion booleana
+    print(obtenga_funcion(lista_minterminos))
+
 
 if __name__ == "__main__":
-    prueba()
+    # prueba()
+    # Prueba Quine McCluskey
+    lista_minterminos = quine_mc_cluskey(4, [1, 4, 6, 15])
+    print(lista_minterminos)
+    print(obtenga_funcion(lista_minterminos))

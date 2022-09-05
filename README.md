@@ -50,3 +50,4 @@ E2%80%93McCluskey.
 - [Bint to int](https://stackoverflow.com/questions/8928240/convert-base-2-binary-number-string-to-int)
 - [Count in Python](https://www.w3schools.com/python/ref_list_count.asp)
 - [Lambda en Python](https://www.w3schools.com/python/python_lambda.asp)
+- [Do while en Python](https://realpython.com/python-do-while/)

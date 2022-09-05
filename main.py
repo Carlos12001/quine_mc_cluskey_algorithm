@@ -46,6 +46,14 @@ def remplaza_complementos(num_bin_1, num_bin_2):
     return resultado
 
 
+# Funcion revisa si ya este numero binario exite dentro los minterminos
+def dentro_de_la_lista(lista_minterinos, num_bin):
+    for i in lista_minterinos:
+        if i == num_bin:
+            return True
+    return False
+
+
 def prueba():
     global num_var
     num_var = 4
@@ -76,6 +84,17 @@ def prueba():
     print(remplaza_complementos("1000", "1010"))
     print("Remplaza los bits complementarios de", "1010", "1010")
     print(remplaza_complementos("1010", "1010"), "\n\n")
+
+    # Paso 6
+    print("Prueba paso 6")
+    print(
+        "Revisa si dicho número binario existe dentro la lista de minterminos",
+        "[1010,0000,1000,0001]", "1010")
+    print(dentro_de_la_lista(["1010", "00-0", "1000", "0001"], "1010"))
+    print(
+        "Revisa si dicho número binario existe dentro la lista de minterminos",
+        "[1010,0000,1000,0001]", "0010")
+    print(dentro_de_la_lista(["1010", "0000", "1000", "0001"], "0010"))
 
 
 if __name__ == "__main__":

@@ -1,4 +1,5 @@
 import timeit
+import re
 
 num_var = 0
 
@@ -96,7 +97,6 @@ def quine_mc_cluskey(num_literales, minterminos):
     global num_var
 
     num_var = num_literales
-    lista_minterminos = []
 
     lista_minterminos = lista_entero_a_bin(minterminos)
     lista_minterminos = ordena_lista_por_1s(lista_minterminos)
@@ -113,7 +113,7 @@ def quine_mc_cluskey(num_literales, minterminos):
 
 
 # Muestra el implicante en su representacion booleana
-def obtenga_literal(minterminos):
+def obtenga_implicante(minterminos):
     global num_var
     resultado = ""
     variables = ["a", "b", "c", "d", "e", "f", "g", "h"]
@@ -136,8 +136,8 @@ def obtenga_literal(minterminos):
 def obtenga_funcion(lista_minterminos):
     resultado = ""
     for i in lista_minterminos[:len(lista_minterminos) - 1]:
-        resultado += obtenga_literal(i) + " + "
-    resultado += obtenga_literal(lista_minterminos[-1])
+        resultado += obtenga_implicante(i) + " + "
+    resultado += obtenga_implicante(lista_minterminos[-1])
     return resultado
 
 
@@ -207,5 +207,75 @@ def prueba():
     print(obtenga_funcion(lista_minterminos), "\n")
 
 
+# Revisa si hay que salirse del programa
+def revisa_salir(entrada):
+    if entrada.lower() == "q":
+        exit()
+
+
+# Revisa si la entrada del número es correcta
+def ingresa_num():
+    entrada = re.sub(" ", "",
+                     input("Digita el "
+                           "número de literales (número de variables)\n"))
+    revisa_salir(entrada)
+
+    try:
+        if not (1 <= int(entrada) <= 6):
+            print("Tienes que digitar un número "
+                  "entero que se encuentra en 1 a 6.")
+            return ingresa_num()
+        return int(entrada)
+    except:
+        print("Tienes que digitar un número entero que se encuentra en 1 a 6.")
+        return ingresa_num()
+
+
+# Revisa si la entrada de min-términos es correcta
+def ingresa_minterminos(n):
+    entrada = re.sub(" ", "",
+                     input("Digita los min-términos separados por coma\n"))
+    revisa_salir(entrada)
+
+    try:
+        lista = entrada.split(",")
+        resultado = []
+        for i in lista:
+            num = int(i)
+            if 0 <= num <= 2 ** n - 1:
+                resultado += [num]
+            else:
+                print("Solamente pueden ser numeros enteros separados por coma"
+                      "además que se tiene que encontrar en el rango de "
+                      "0 a " + str(2 ** n - 1))
+                return ingresa_minterminos(n)
+        return resultado
+    except:
+        print("Solamente pueden ser numeros enteros separados por coma"
+              "además que se tiene que encontrar en el rango de "
+              "0 a " + str(2 ** n - 1))
+        return ingresa_minterminos(n)
+
+
+def inicia_programa():
+    print("\n----Bienvenido al Algoritmo de Quine McCluskey----\n")
+    print("Presiona q si quieres salir\n")
+
+    n = ingresa_num()
+    minterminos = ingresa_minterminos(n)
+
+    resultado = calcula_tiempo(quine_mc_cluskey, n, minterminos)
+
+    print("\n--------\nResultado:", resultado[1], "\n")
+
+    print("Tiempo de ejecución: ", resultado[0], "\n")
+
+    print("Representación funcional booleana")
+    print(obtenga_funcion(resultado[1]), "\n")
+
+
 if __name__ == "__main__":
-    prueba()
+    try:
+        inicia_programa()
+    except:
+        exit(-1)

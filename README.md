@@ -9,10 +9,27 @@ Se desarrollará el algoritmo de Mc Cluskey. A través de un cuaderno de Jupyter
 
 # ¿Cómo correr el proyecto?
 
-Abre el arhivo llamado ``main.ipynb``
+## Pre-Requisitos
 
-Dentro el arhivo abrá un apartado de **Testing**. En dicho apartado
-se encuentra las pruebas de los algoritmos con el fin de verificar el funcionamiento.
+- Tener instaldo python 3
+- Tener descargado las siguientes librerias
+
+
+```commandline
+pip install notebook
+```
+
+```commandline
+pip install pyeda
+```
+ 
+# Donde
+Abre el arhivo llamado ``main.ipynb``. 
+
+Dentro el arhivo abrá un apartado deEn el apartado **Inciar programa**.
+Además existe un apartado de **Testing**. En dicho apartado
+se encuentra las pruebas de los algoritmos con el fin de verificar el 
+funcionamiento.
 
 # Enunciado
 

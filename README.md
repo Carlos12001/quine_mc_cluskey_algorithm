@@ -19,9 +19,9 @@ Se desarrollará el algoritmo de Mc Cluskey. A través de un cuaderno de Jupyter
 pip install notebook
 ```
 
-```commandline
-pip install pyeda
-```
+
+> ~~pip install pyeda~~
+
  
 # Donde
 Abre el arhivo llamado ``main.ipynb``. 
@@ -69,4 +69,4 @@ E2%80%93McCluskey.
 - [Lambda en Python](https://www.w3schools.com/python/python_lambda.asp)
 - [Do while en Python](https://realpython.com/python-do-while/)
 - [Funcion como parametro](https://es.stackoverflow.com/questions/139223/se-puede-pasar-una-funci%C3%B3n-como-par%C3%A1metro-en-python)
-- [Calcular tiempo de funciones]()
+- [Calcular tiempo de funciones](https://www.youtube.com/watch?v=bWvcdypQCcs)

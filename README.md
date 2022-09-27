@@ -70,3 +70,4 @@ E2%80%93McCluskey.
 - [Do while en Python](https://realpython.com/python-do-while/)
 - [Funcion como parametro](https://es.stackoverflow.com/questions/139223/se-puede-pasar-una-funci%C3%B3n-como-par%C3%A1metro-en-python)
 - [Calcular tiempo de funciones](https://www.youtube.com/watch?v=bWvcdypQCcs)
+- [Ejemplo C++](https://github.com/AkshayRaman/Quine-McCluskey-algorithm)
